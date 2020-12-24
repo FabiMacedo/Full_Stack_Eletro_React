@@ -2,7 +2,6 @@ const Product = () => {
 
     const [product, setProduct] = React.useState([]);
     const [render] = React.useState(false);
-
     const [category, setCategory] = React.useState("todas");
 
     React.useEffect(async () => {

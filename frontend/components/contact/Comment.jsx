@@ -1,10 +1,11 @@
 const Comment = () => {
 
     const [comment, setComment] = React.useState([]);
+
     React.useEffect(async () => {
         const url = "http://localhost/Full_Stack_Eletro_React/backend/consult-comment.php";
         const response = await fetch(url);
-        setComentario(await response.json());
+        setComment(await response.json());
     }, []);
 
     return (
@@ -12,13 +13,12 @@ const Comment = () => {
             <div className="container">
                 <h2>Comentários dos Clientes</h2>
             </div>
-            <hr className="bg-danger"/>
 
             <div className="container">
                 <section className="form">
-                    {comment.map (item => {
+                    {comment.map((item) => {
                         return (
-                            <div>
+                            <div  key={item.id_comentarios}>
                                 <hr className="bg-danger"/>
                                 <p>Nome: {item.nome}</p>
                                 <p>Mensagem: {item.msg}</p>
