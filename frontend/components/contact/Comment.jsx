@@ -3,7 +3,7 @@ const Comment = () => {
     const [comment, setComment] = React.useState([]);
 
     React.useEffect(async () => {
-        const url = "http://localhost/Full_Stack_Eletro_React/backend/consult-comment.php";
+        const url = "http://localhost:3333/comentarios";
         const response = await fetch(url);
         setComment(await response.json());
     }, []);

@@ -1,2 +1,0 @@
-# Full_Stack_Eletro_React
- Projeto Full_Stack_Eletro_React

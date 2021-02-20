@@ -5,7 +5,7 @@ const Product = () => {
     const [category, setCategory] = React.useState("todas");
 
     React.useEffect(async () => {
-        const url = "http://localhost/Full_Stack_Eletro_React/backend/";
+        const url = "http://localhost:3333/produto";
         const response = await fetch(url);
         setProduct(await response.json());
     }, [render]);
@@ -35,7 +35,7 @@ const Product = () => {
                             return (
                                 <div key={element.idproduto} className="box-produto card col-2 m-3 border-0">
                                     <div className="card-img">
-                                        <img className="img-fluid" src={`http://localhost/Full_Stack_Eletro_React/frontend/components/${element.imagem}`}/>
+                                        <img className="img-fluid" src={`http://localhost:3333/FullStackEletro_ReactNode/frontend/components/${element.imagem}`}/>
                                     </div>
 
                                     <div className="card-header text-center">
@@ -57,7 +57,7 @@ const Product = () => {
                             return (
                                 <div key={element.idproduto} className="box-produto card col-2 m-3 border-0">
                                     <div className="card-img">
-                                        <img className="img-fluid" src={`http://localhost/Full_Stack_Eletro_React/frontend/components/${element.imagem}`}/>
+                                        <img className="img-fluid" src={`http://localhost/FullStackEletro_ReactNode/frontend/components/${element.imagem}`}/>
                                     </div>
 
                                     <div className="card-header text-center">
